@@ -1,60 +1,47 @@
 # ✈️ Root Cause Analysis Keterlambatan Penerbangan: End-to-End Data Workflow (Excel - Tableau)
 
-## 📌 Ringkasan Proyek (Project Executive Summary)
+## 📌 Ringkasan Eksekutif (Executive Summary)
 
-Proyek ini adalah studi kasus mendalam untuk mengidentifikasi **akar masalah (Root Causes)** di balik ribuan menit keterlambatan penerbangan. Menggunakan data historis, saya menerapkan *end-to-end data workflow* dari pembersihan data hingga visualisasi profesional, dengan tujuan memberikan *actionable insights* kepada tim **Operations** untuk meningkatkan kinerja ketepatan waktu (*On-Time Performance*).
+Proyek ini adalah studi kasus **Operational Performance** yang berfokus pada **Root Cause Analysis (RCA)** keterlambatan penerbangan. Saya menerapkan *end-to-end data workflow*, mulai dari *Data Cleansing* di **Excel/Google Sheets** hingga visualisasi profesional di **Tableau**, untuk menghasilkan *actionable insights* bagi tim Operasional dalam meningkatkan kinerja ketepatan waktu (*On-Time Performance*).
 
 ## 🛠️ Tools dan Data
 
-* **Data Acquisition & Engineering:** Microsoft Excel / Google Sheets
+* **Data Engineering & Cleansing:** Microsoft Excel / Google Sheets
 * **Visualisasi & Dashboarding:** Tableau Desktop
-* **Data Source:** `Airline_Delay_Cause.csv` (Data bulanan penyebab keterlambatan).
+* **Data Source:** Data penyebab keterlambatan penerbangan (`Airline_Delay_Cause.csv`).
 
 ---
 
-## ⚙️ Fase 1: Data Cleansing & Feature Engineering (Excel Focus)
+## ⚙️ Workflow Data Analyst
 
-Fase ini berfokus pada transformasi data mentah menjadi metrik yang siap dianalisis.
+### Fase 1: Data Cleansing & Feature Engineering (Excel/Sheets)
 
-| Tugas | Tujuan Operasional | Metrik Kunci (Rumus Excel/Sheets) |
+Fase ini esensial untuk menyiapkan data agar metrik operasional dapat dihitung dengan akurat.
+
+| Tugas | Tujuan Operasional | Metrik Kunci yang Dihasilkan |
 | :--- | :--- | :--- |
-| **Data Integrity Check** | Memastikan keseragaman entitas (nama bandara, maskapai). | `TRIM()`, `UNIQUE()`, `Data > Remove Duplicates` |
-| **Total Delay** | Menghitung total waktu tunda per baris (menit). | `= SUM(carrier_delay, weather_delay, ...)` |
-| **Kontribusi Penyebab** | Mengukur *share* setiap faktor (*Carrier*, *Weather*, *NAS*) dalam total delay. | `= [carrier_delay] / [Total Delay]` |
-| **Pemisahan Tanggal** | Menggabungkan kolom tahun dan bulan menjadi satu metrik waktu. | `=DATE(year, month, 1)` |
+| **Data Cleaning** | Memastikan *data integrity* pada nama maskapai dan bandara. | Konsistensi data melalui fungsi `TRIM()` dan `Remove Duplicates`. |
+| **Total Waktu Delay** | Menghitung KPI utama kinerja operasional. | Total waktu tunda (menit) dari semua penyebab per entitas. |
+| **Kontribusi Penyebab** | Mengukur *share* setiap faktor dalam total *delay* (misal: *Carrier Delay*). | Persentase kontribusi per penyebab. |
+| **Klasifikasi Risiko** | *Flagging* bandara/maskapai berisiko tinggi. | Kategori risiko operasional (`High Risk`, `Normal`). |
 
----
+### Fase 2: Analisis Kunci dan Visualisasi (Pivot Table & Tableau)
 
-## 📊 Fase 2: Analisis & Visualisasi Kunci (Pivot Table & Tableau)
+Wawasan diolah di Excel dan dikomunikasikan secara visual melalui Tableau.
 
-### 2.1 Analisis Pivot Table (Excel)
-
-Mengidentifikasi fokus analisis sebelum visualisasi.
-
-* **KPI Utama:** Menghitung rata-rata *Total Waktu Delay* bulanan.
-* **Root Cause Dominan:** Mengelompokkan `Total Delay` berdasarkan penyebab utama (**Carrier**, **Weather**, **NAS**).
-* **Hotspot Operasional:** Mengurutkan bandara berdasarkan **SUM** `Total Waktu Delay` (*Top 10 Airport*).
-
-### 2.2 Visualisasi Tableau
-
-Visualisasi dirancang untuk mengkomunikasikan *bottleneck* operasional secara cepat.
-
-| Visualisasi | Tipe Chart | Wawasan Operasional yang Ditampilkan |
+| Analisis/Visualisasi | Fokus Operasional | Wawasan Utama |
 | :--- | :--- | :--- |
-| **Peta Keterlambatan** | **Geo-Spatial Map** | Menunjukkan lokasi bandara/negara bagian dengan *delay* tertinggi (Hotspot Operasional). |
-| **Kontribusi Delay** | **Stacked Bar Chart** | Membandingkan persentase masalah **Internal** (*Carrier Delay*) vs **Eksternal** (*Weather/NAS Delay*). |
-| **Tren Musiman** | **Line Chart** | Memantau perubahan *delay* total dari waktu ke waktu, terutama dampak *Weather Delay* pada bulan-bulan tertentu. |
+| **Pivot Table** | Menentukan *Root Cause* dan *Bottleneck* teratas. | Identifikasi **Top 10 Bandara** dan **Maskapai** dengan *delay* tertinggi. |
+| **Peta Hotspot** | Visualisasi Geografis (Tableau). | Menunjukkan lokasi **Hotspot Operasional** untuk intervensi yang tepat sasaran. |
+| **Kontribusi Delay** | Stacked Bar Chart (Tableau). | Membandingkan persentase masalah **Internal** (*Carrier Delay*) vs **Eksternal** (*Weather/NAS Delay*). |
+| **Tren Waktu** | Line Chart (Tableau). | Memantau perubahan kinerja bulanan dan dampak musiman (*Seasonal Trends*). |
 
 ---
 
 ## 💡 Key Insights & Rekomendasi Strategis
 
-Analisis ini memberikan dasar bagi keputusan *Operations* yang tepat sasaran:
+Analisis ini memberikan dasar bagi keputusan **Operations** yang terukur:
 
-1.  **Jika Carrier Delay Tinggi:** Fokus perbaikan harus pada *internal operations* (jadwal *maintenance* dan manajemen kru).
-2.  **Jika Weather/NAS Delay Tinggi:** Rekomendasikan penambahan *buffer time* yang strategis pada rute dan bulan yang paling terdampak untuk mitigasi risiko.
-3.  **Targeted Improvement:** Daftar 10 bandara teratas menjadi target prioritas untuk *review* alur kerja dan koordinasi *Air Traffic Control*.
-
----
-
-**Apakah Anda ingin saya memberikan detail lebih lanjut pada salah satu fase di atas (misalnya, membuat contoh data *dummy* untuk Excel)?**
+1.  **Isu Internal:** Jika **Carrier Delay** dominan, fokus perbaikan dialihkan ke **Manajemen Kru** dan jadwal *maintenance*.
+2.  **Mitigasi Risiko:** Data *Weather Delay* digunakan untuk merekomendasikan penambahan **Buffer Time** pada rute yang rentan risiko cuaca.
+3.  **Targeted Improvement:** Daftar Bandara *Top 10 Delay* menjadi target prioritas untuk *review* alur kerja dan koordinasi *Air Traffic Control* (mengurangi **NAS Delay**).
