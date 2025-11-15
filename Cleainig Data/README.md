@@ -1,5 +1,5 @@
-# 🎬 Data Governance & Analytics Framework: IMDB Movie Dataset
-## ✨ Implementasi Formula Excel/Sheets Tingkat Mahir untuk Optimalisasi Operasional
+# 🎬Analytics: IMDB Movie Dataset
+## ✨ Implementasi Formula Excel/Sheets
 
  **Tools Kunci:** ⚙️ Microsoft Excel & Google Sheets
 
