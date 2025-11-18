@@ -1,23 +1,25 @@
-# 🚀 Data Analyst Portfolio: Mastering Operational Efficiency & Automation
+# 🚀 Data Analyst Portfolio: Driving Operational Efficiency & Automation
 
-## 🎯 Ringkasan Pembelajaran (Skills & Impact Summary)
+## 🎯 Skills & Impact Summary
 
-Portofolio ini mendemonstrasikan penguasaan *end-to-end data workflow*, dari *data cleansing* hingga *executive dashboarding*, dengan fokus utama pada peningkatan **Operational Efficiency** dan **Profitability**.
+This portfolio showcases mastery of **end-to-end data workflows**, from **data cleansing** to **executive dashboarding**, with a strong focus on **Operational Efficiency** and **Profitability**.
 
-| Tools Utama | Proyek & Aplikasi Kunci | Pembelajaran Kunci yang Dikuasai |
+| Key Tools | Key Projects & Applications | Core Skills & Achievements |
 | :--- | :--- | :--- |
-| **Excel / Google Sheets** | **Analisis Penjualan & Data Cleansing** | **Data Integrity** (`TRIM`, `UNIQUE`) dan **Advanced Feature Engineering** (IF/IFS, DATE, Persentase Kontribusi). Menguasai perhitungan KPI Finansial seperti **Total Revenue** dan **AOV** (Average Order Value). |
-| **Advanced SQL** | **Otomasi Logistik & Data Governance** | Merancang *Data Structure* (Data Modeling) dan implementasi solusi *backend* operasional: **Stored Procedures** untuk *update* stok otomatis, **Views** untuk *early warning* stok rendah, dan **CTEs** untuk perhitungan **Net Profit** Gudang. |
-| **Tableau** | **Root Cause Analysis (RCA) & Dashboarding** | Keahlian dalam *Executive Dashboarding* dan *Storytelling* Data. Mampu memvisualisasikan **Root Cause Analysis** Keterlambatan Penerbangan, memetakan *hotspot* operasional (**Geo-Spatial Mapping**), dan membandingkan *Internal* vs *Eksternal* *delay*. |
+| **Excel / Google Sheets** | **Sales Analysis & Data Cleansing** | Ensured **Data Integrity** (`TRIM`, `UNIQUE`) and advanced feature engineering (IF/IFS, DATE, Contribution %) for KPI calculations such as **Total Revenue** and **AOV** (Average Order Value). |
+| **Advanced SQL** | **Logistics Automation & Data Governance** | Designed **data structures** and implemented operational backend solutions: **Stored Procedures** for automated inventory updates, **Views** for early warning on low stock, and **CTEs** for **Net Profit** calculations. |
+| **Tableau** | **Root Cause Analysis (RCA) & Dashboarding** | Expert in **executive dashboards** and data storytelling. Visualized flight delay RCA, mapped operational hotspots (**geo-spatial mapping**), and compared **internal vs external delay drivers**. |
 
 ---
 
-## 📈 (Komprehensif & Profesional)
+## 📈 Professional Summary
 
-Saya telah menguasai keterampilan penting untuk seorang Data Analyst di ranah **Operations**.
+I have honed critical skills for a Data Analyst in **Operations**:
 
-* **Pondasi Analisis:** Saya mahir menggunakan **Excel/Sheets** untuk analisis *Revenue* (**Project Pizza**) dan *Time Series Analysis*. Saya tidak hanya menghitung **Total Revenue** dan **Top Sellers**, tetapi juga menciptakan metrik operasional kompleks seperti **Total Waktu Delay** untuk analisis efisiensi maskapai.
-* **Otomasi & Struktur Data:** Saya mampu beralih ke *backend* dengan **SQL** untuk membangun sistem. Pembelajaran terbesar adalah mengimplementasikan **Automasi Operasional** (membuat **Stored Procedure** untuk *Inventory Management*) dan melakukan *Advanced Querying* (menggunakan **CTEs** untuk akurasi perhitungan **Net Profit**).
-* **Komunikasi Data:** Saya terampil mengubah hasil analisis RCA (Analisis Keterlambatan Penerbangan) menjadi visualisasi yang berdampak di **Tableau**. Saya dapat mengkomunikasikan secara jelas titik lemah operasional dan memberikan rekomendasi strategis berdasarkan data terfilter dan *geographic insights*.
+* **Analytical Foundation:** Proficient in **Excel/Sheets** for revenue and time series analysis (e.g., **Project Pizza**). Beyond calculating **Total Revenue** and **Top Sellers**, I engineered operational metrics like **Total Delay Time** for airline efficiency analysis.  
 
-Secara keseluruhan, saya mampu mengelola *data life cycle* secara penuh—dari menjamin *data integrity* hingga memberikan wawasan yang langsung meningkatkan **Efficiency** dan **Profitability** bisnis.
+* **Automation & Data Structuring:** Transitioned to backend solutions with **SQL**, implementing **Operational Automation** (e.g., **Stored Procedures** for inventory management) and performing **advanced querying** using **CTEs** to ensure accurate **Net Profit** calculations.  
+
+* **Data Communication:** Skilled at converting RCA insights into impactful **Tableau dashboards**. Able to clearly communicate operational bottlenecks and provide strategic recommendations using filtered data and **geospatial insights**.  
+
+Overall, I manage the **full data lifecycle**—from ensuring **data integrity** to delivering actionable insights that enhance **efficiency** and **profitability**.
